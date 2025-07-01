@@ -1,7 +1,3 @@
-# Firebase Configuration (contains sensitive API keys)
-firebase-config.js
-config.js
-
 # Environment variables
 .env
 .env.local
