@@ -1,0 +1,40 @@
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyCwZ7zIe-dwrMy1ukK3hiAVuky-JR02efE",
+  authDomain: "ag-genius-f3c45.firebaseapp.com",
+  projectId: "ag-genius-f3c45",
+  storageBucket: "ag-genius-f3c45.firebasestorage.app",
+  messagingSenderId: "125700152205",
+  appId: "1:125700152205:web:8b530aef1748e331bb3bc4",
+  measurementId: "G-MT2E3ZWV5H"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Allow read and write access to the 'userProfiles' collection
+    // only if the user is authenticated (request.auth != null).
+    // This allows new users to create their profile upon registration
+    // and existing users to read/update their own profile.
+    match /userProfiles/{userId} {
+      allow read, write: if request.auth != null && request.auth.uid == userId;
+    }
+
+    // Deny all other read and write operations by default.
+    // This is a strict default to ensure no other data is accidentally exposed or modified.
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>AgGenius Blog | Agricultural Insights | Farming Tips & Financial Advice Ghana</title>
+  <meta name="title" content="AgGenius Blog | Agricultural Insights | Farming Tips & Financial Advice Ghana">
+  <meta name="description" content="Read expert agricultural insights, farming tips, financial advice, and industry trends from AgGenius consultants. Learn about sustainable farming, agricultural investments, and agribusiness strategies in Ghana.">
+  <meta name="keywords" content="agricultural blog ghana, farming tips, agricultural financial advice, agribusiness insights, sustainable farming blog, agricultural investment tips, farming strategies ghana, agricultural trends">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <meta name="author" content="AgGenius Consultancy Services">
+  <link rel="canonical" href="https://aggenius.com/blog.html">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://aggenius.com/blog.html">
+  <meta property="og:title" content="AgGenius Blog | Agricultural Insights | Farming Tips & Financial Advice">
+  <meta property="og:description" content="Expert agricultural insights, farming tips, and financial advice from Ghana's leading agricultural consultants. Discover sustainable farming strategies and investment opportunities.">
+  <meta property="og:image" content="https://aggenius.com/journals.jpg">
+  <meta property="og:site_name" content="AgGenius Consultancy Services">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://aggenius.com/blog.html">
+  <meta property="twitter:title" content="AgGenius Blog | Agricultural Insights & Farming Tips">
+  <meta property="twitter:description" content="Expert agricultural insights and farming tips from Ghana's leading consultants. Learn sustainable farming and investment strategies.">
+  <meta property="twitter:image" content="https://aggenius.com/journals.jpg">
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "AgGenius Agricultural Blog",
+    "description": "Expert insights on agricultural consulting, farming techniques, financial planning, and sustainable agriculture practices in Ghana",
+    "url": "https://aggenius.com/blog.html",
+    "author": {
+      "@type": "Organization",
+      "name": "AgGenius Consultancy Services"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AgGenius Consultancy Services",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://aggenius.com/croplogo.png"
+      }
+    },
+    "blogPost": [
+      {
+        "@type": "BlogPosting",
+        "headline": "Are Consultancy Services Worth It?",
+        "datePublished": "2025-02-21",
+        "author": {
+          "@type": "Person",
+          "name": "Elizabeth Osei"
+        },
+        "description": "Every professional setup or business needs proper expert advice to grow efficiently."
+      },
+      {
+        "@type": "BlogPosting",
+        "headline": "Loan as a Legit Source of Financial Freedom Through Agric",
+        "datePublished": "2025-02-23", 
+        "author": {
+          "@type": "Person",
+          "name": "Maame Esi Hughes"
+        },
+        "description": "Discover how strategic loans can accelerate your agricultural growth and create sustainable income streams."
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <style>
+    /* Blog page specific responsive styles */
+    .blog-header {
+      background-image: url('journals.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      position: relative;
+    }
+
+    @media (min-width: 640px) {
+      .blog-header {
+        padding: 50px 25px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .blog-header {
+        padding: 60px 30px;
+      }
+    }
+
+    .blog-header h1 {
+      margin: 0;
+      font-weight: 700;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+      /* Mobile first typography */
+      font-size: 2rem;
+    }
+
+    @media (min-width: 640px) {
+      .blog-header h1 {
+        font-size: 2.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .blog-header h1 {
+        font-size: 3rem;
+      }
+    }
+
+    /* Enhanced responsive blog layout */
+    .blog-container {
+      display: grid;
+      gap: 20px;
+      padding: 20px 15px;
+      max-width: 1200px;
+      margin: 0 auto;
+      /* Mobile: stacked layout */
+      grid-template-columns: 1fr;
+    }
+
+    @media (min-width: 640px) {
+      .blog-container {
+        gap: 30px;
+        padding: 30px 20px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .blog-container {
+        gap: 40px;
+        padding: 40px 30px;
+        /* Desktop: sidebar layout */
+        grid-template-columns: 2fr 1fr;
+      }
+    }
+
+    /* Main blog content */
+    .blog-main {
+      /* Inherits grid behavior */
+    }
+
+    /* Enhanced blog post styling */
+    .blog-post {
+      background: white;
+      margin-bottom: 25px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      transition: all 0.3s ease;
+      border: 1px solid #e0e0e0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @media (min-width: 640px) {
+      .blog-post {
+        padding: 30px;
+        margin-bottom: 30px;
+      }
+    }
+
+    .blog-post::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #4CAF50, #2E7D32);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+    }
+
+    .blog-post:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+      border-color: #4CAF50;
+    }
+
+    .blog-post:hover::before {
+      transform: scaleX(1);
+    }
+
+    .blog-post h2 {
+      margin-top: 0;
+      color: #2a1a01;
+      font-weight: 600;
+      /* Mobile first typography */
+      font-size: 1.3rem;
+      line-height: 1.3;
+    }
+
+    @media (min-width: 640px) {
+      .blog-post h2 {
+        font-size: 1.5rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .blog-post h2 {
+        font-size: 1.6rem;
+      }
+    }
+
+    .blog-post p {
+      margin-bottom: 15px;
+      line-height: 1.6;
+      color: #444;
+      font-size: 0.9rem;
+    }
+
+    @media (min-width: 640px) {
+      .blog-post p {
+        font-size: 1rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .blog-post small {
+      display: block;
+      margin-bottom: 15px;
+      color: #777;
+      font-size: 0.85rem;
+      font-style: italic;
+    }
+
+    @media (min-width: 640px) {
+      .blog-post small {
+        font-size: 0.9rem;
+        margin-bottom: 20px;
+      }
+    }
+
+    .blog-post a {
+      color: #4CAF50;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 8px 16px;
+      background: rgba(76, 175, 80, 0.1);
+      border-radius: 20px;
+      transition: all 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+      /* Touch-friendly */
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 120px;
+    }
+
+    .blog-post a:hover {
+      background: #4CAF50;
+      color: white;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(76, 175, 80, 0.3);
+    }
+
+    /* Enhanced sidebar */
+    .blog-sidebar {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      height: fit-content;
+      border: 1px solid #e0e0e0;
+    }
+
+    @media (min-width: 640px) {
+      .blog-sidebar {
+        padding: 30px;
+      }
+    }
+
+    .blog-sidebar h3 {
+      margin-top: 0;
+      color: #2a1a01;
+      font-weight: 600;
+      margin-bottom: 20px;
+      /* Mobile first typography */
+      font-size: 1.2rem;
+    }
+
+    @media (min-width: 640px) {
+      .blog-sidebar h3 {
+        font-size: 1.3rem;
+      }
+    }
+
+    .blog-sidebar ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .blog-sidebar ul li {
+      margin-bottom: 12px;
+    }
+
+    .blog-sidebar ul li a {
+      color: #4CAF50;
+      text-decoration: none;
+      display: block;
+      padding: 10px 15px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      background: rgba(76, 175, 80, 0.05);
+      /* Touch-friendly */
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+
+    .blog-sidebar ul li a:hover {
+      background: rgba(76, 175, 80, 0.1);
+      transform: translateX(5px);
+      text-decoration: none;
+    }
+
+    /* Category badges */
+    .category-badge {
+      background: #4CAF50;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 15px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+
+    /* Reading time indicator */
+    .reading-time {
+      color: #666;
+      font-size: 0.8rem;
+      margin-left: 15px;
+    }
+
+    @media (min-width: 640px) {
+      .reading-time {
+        font-size: 0.85rem;
+      }
+    }
+
+    /* Enhanced footer for blog */
+    .blog-footer {
+      background-color: rgb(48, 31, 11);
+      background-image: url('journals.jpg');
+      background-blend-mode: overlay;
+      color: white;
+      text-align: center;
+      padding: 20px 15px;
+      margin-top: 40px;
+    }
+
+    @media (min-width: 640px) {
+      .blog-footer {
+        padding: 30px 20px;
+      }
+    }
+
+    /* Mobile navigation improvements */
+    .blog-nav {
+      display: flex;
+      justify-content: center;
+      background-color: rgb(48, 31, 11);
+      padding: 8px 0;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    @media (min-width: 640px) {
+      .blog-nav {
+        padding: 15px 0;
+        gap: 0;
+      }
+    }
+
+    .blog-nav a {
+      color: white;
+      padding: 12px 16px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      margin: 2px;
+      border-radius: 4px;
+      font-size: 14px;
+      /* Touch-friendly */
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    @media (min-width: 640px) {
+      .blog-nav a {
+        padding: 15px 20px;
+        margin: 0 15px;
+        font-size: 16px;
+      }
+    }
+
+    .blog-nav a:hover {
+      color: #ffdd99;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    /* Mobile: Stack navigation if too narrow */
+    @media (max-width: 480px) {
+      .blog-nav {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .blog-nav a {
+        width: 90%;
+        max-width: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="blog-header">
+    <h1>OUR BLOG SITE</h1>
+  </header>
+
+  <nav class="blog-nav">
+    <a href="index.html">HOME</a>
+    <a href="about.html">ABOUT</a>
+    <a href="services.html">SERVICES</a>
+    <a href="gallery.html">GALLERY</a>
+    <a href="contact.html">CONTACT</a>
+    <a href="blog.html">BLOGSITE</a>
+         <a href="profile.html" class="profile-link" style="display: none;">👤 <span class="user-name-display">PROFILE</span></a>
+     <a href="login.html" class="auth-login-link" style="display: none;">LOGIN</a>
+     <a href="register.html" class="auth-register-link" style="display: none;">REGISTER</a>
+  </nav>
+
+  <div class="blog-container">
+    <main class="blog-main">
+      <div class="blog-post">
+        <div class="category-badge">Financial Planning</div>
+        <h2><u>Are Consultancy Services Worth It?</u></h2>
+        <small>Posted on February 21, 2025 by Elizabeth Osei <span class="reading-time">• 5 min read</span></small>
+        <p>Every professional setup or business needs proper expert advice to grow efficiently. Learn how consultancy services can boost your ROI and transform your agricultural business through strategic planning and expert guidance.</p>
+        <a href="#">Read more</a>
+      </div>
+
+      <div class="blog-post">
+        <div class="category-badge">Investment Strategy</div>
+        <h2><u>Loan as a Legit Source of Financial Freedom Through Agric</u></h2>
+        <small>Posted on February 23, 2025 by Maame Esi Hughes <span class="reading-time">• 7 min read</span></small>
+        <p>It's cliché to think that the only way to gain financial freedom in the agric sector is through investments. Discover how strategic loans can accelerate your agricultural growth and create sustainable income streams.</p>
+        <a href="#">Read more</a>
+      </div>
+
+      <div class="blog-post">
+        <div class="category-badge">Agricultural Insights</div>
+        <h2><u>The Money We Seek Is on Our Land</u></h2>
+        <small>Posted on February 25, 2025 by James Brewwort <span class="reading-time">• 6 min read</span></small>
+        <p>The soil in Africa is rich. Our pockets are dry because all our riches are being walked upon. Explore the untapped potential of African agriculture and how to monetize land resources effectively.</p>
+        <a href="#">Read more</a>
+      </div>
+
+      <div class="blog-post">
+        <div class="category-badge">Technology</div>
+        <h2><u>Digital Agriculture: The Future is Now</u></h2>
+        <small>Posted on February 27, 2025 by Dr. Sarah Mensah <span class="reading-time">• 8 min read</span></small>
+        <p>From precision farming to IoT sensors, digital technology is revolutionizing agriculture. Learn how to integrate modern tech solutions into traditional farming practices for maximum yield and efficiency.</p>
+        <a href="#">Read more</a>
+      </div>
+
+      <div class="blog-post">
+        <div class="category-badge">Sustainability</div>
+        <h2><u>Climate-Smart Agriculture Practices</u></h2>
+        <small>Posted on March 1, 2025 by Prof. Kwame Asante <span class="reading-time">• 10 min read</span></small>
+        <p>Climate change poses significant challenges to agriculture. Discover sustainable practices that not only protect the environment but also increase profitability and resilience in farming operations.</p>
+        <a href="#">Read more</a>
+      </div>
+    </main>
+
+    <aside class="blog-sidebar">
+      <h3>Recent Posts</h3>
+      <ul>
+        <li><a href="#">Climate-Smart Agriculture Practices</a></li>
+        <li><a href="#">Digital Agriculture: The Future is Now</a></li>
+        <li><a href="#">The Money We Seek Is on Our Land</a></li>
+        <li><a href="#">Loan as Financial Freedom Through Agric</a></li>
+        <li><a href="#">Are Consultancy Services Worth It?</a></li>
+      </ul>
+
+      <h3>Categories</h3>
+      <ul>
+        <li><a href="#">Financial Planning</a></li>
+        <li><a href="#">Investment Strategy</a></li>
+        <li><a href="#">Agricultural Insights</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Sustainability</a></li>
+        <li><a href="#">Market Analysis</a></li>
+      </ul>
+
+      <h3>Popular Tags</h3>
+      <ul>
+        <li><a href="#">Agriculture Finance</a></li>
+        <li><a href="#">Sustainable Farming</a></li>
+        <li><a href="#">Investment Tips</a></li>
+        <li><a href="#">Technology</a></li>
+        <li><a href="#">Climate Change</a></li>
+      </ul>
+    </aside>
+  </div>
+
+  <footer class="blog-footer">
+    <p>© 2025 The AgGenius Consultancy Services. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="profile-widget.js"></script>
+  <script src="image-optimization.js"></script>
+</body>
+</html>

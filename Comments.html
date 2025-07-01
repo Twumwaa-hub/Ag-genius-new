@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Comments - AgGenius</title>
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .auth-required-notice {
+        background: linear-gradient(135deg, #4CAF50, #2E7D32);
+        color: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        margin: 20px 0;
+      }
+      
+      .comment-form {
+        background: white;
+        padding: 25px;
+        border-radius: 8px;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        margin: 20px 0;
+      }
+      
+      .comment-list {
+        margin-top: 30px;
+      }
+      
+      .comment-item {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        margin-bottom: 15px;
+        border-left: 4px solid #4CAF50;
+      }
+      
+      .comment-author {
+        font-weight: bold;
+        color: #2E7D32;
+        margin-bottom: 5px;
+      }
+      
+      .comment-date {
+        font-size: 0.9em;
+        color: #666;
+        margin-bottom: 10px;
+      }
+    </style>
+  </head>
+  <body class="main-layout">
+    <div class="header">
+      <button class="menu-toggle" id="menuToggle">☰</button>
+      <h1>User Comments</h1>
+    </div>
+
+    <div class="sidebar">
+      <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="about.html">ABOUT</a>
+        <a href="services.html">SERVICES</a>
+        <a href="gallery.html">GALLERY</a>
+        <a href="contact.html">CONTACT</a>
+        <a href="blog.html">BLOGSITE</a>
+        <a href="Comments.html" class="active">COMMENTS</a>
+        <a href="login.html" class="auth-login-link" style="display: none;">LOGIN</a>
+        <a href="register.html" class="auth-register-link" style="display: none;">REGISTER</a>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <div class="auth-required-notice">
+        <h2>🔒 Welcome to the Comments Section!</h2>
+        <p>This area is exclusive to registered users. Here you can share your thoughts, ask questions, and connect with other members of the AgGenius community.</p>
+        <p><strong>You're logged in!</strong> Feel free to share your experiences and insights below.</p>
+      </div>
+
+      <div class="comment-form">
+        <h3>Share Your Thoughts</h3>
+        <form id="comment-form">
+          <div class="form-group">
+            <label for="comment-text">Your Comment:</label>
+            <textarea id="comment-text" name="comment" rows="4" placeholder="Share your thoughts about our services, ask questions, or provide feedback..." required></textarea>
+          </div>
+          <button type="submit" class="btn">Post Comment</button>
+        </form>
+      </div>
+
+      <div class="comment-list">
+        <h3>Recent Comments</h3>
+        
+        <div class="comment-item">
+          <div class="comment-author">John Mensah</div>
+          <div class="comment-date">February 25, 2025</div>
+          <p>The financial advisory services have been incredibly helpful for my farm. The team provided clear guidance on investment strategies that have already started showing returns!</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-author">Sarah Addo</div>
+          <div class="comment-date">February 24, 2025</div>
+          <p>I attended the sustainable farming workshop and learned so much. The practical tips on soil management have improved my crop yield by 30%. Highly recommend AgGenius!</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-author">Kwame Asante</div>
+          <div class="comment-date">February 23, 2025</div>
+          <p>Question: Do you provide consultancy for small-scale poultry farming? I'm looking to expand my operations and need expert advice on financing options.</p>
+        </div>
+
+        <div class="comment-item">
+          <div class="comment-author">Ama Serwaa</div>
+          <div class="comment-date">February 22, 2025</div>
+          <p>The market access program helped me connect directly with buyers in Accra. My revenue has increased significantly since joining. Thank you AgGenius team!</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>© 2025 The AgGenius Consultancy Services. All Rights Reserved.</p>
+    </div>
+
+      <script src="script.js"></script>
+  <script src="profile-widget.js"></script>
+  <script>
+    // Handle comment form submission
+    document.getElementById('comment-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const commentText = document.getElementById('comment-text').value;
+        const userEmail = localStorage.getItem('userEmail') || 'Anonymous User';
+        
+        if (commentText.trim()) {
+          // Create new comment element
+          const commentList = document.querySelector('.comment-list');
+          const newComment = document.createElement('div');
+          newComment.className = 'comment-item';
+          newComment.innerHTML = `
+            <div class="comment-author">${userEmail}</div>
+            <div class="comment-date">${new Date().toLocaleDateString()}</div>
+            <p>${commentText}</p>
+          `;
+          
+          // Insert after the heading
+          const firstComment = commentList.querySelector('.comment-item');
+          commentList.insertBefore(newComment, firstComment);
+          
+          // Clear form
+          document.getElementById('comment-text').value = '';
+          
+          // Show success message
+          showToast('Comment posted successfully!', 'success');
+        }
+      });
+    </script>
+  </body>
+</html>
